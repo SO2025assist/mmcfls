@@ -1,37 +1,41 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "engineer building models",
-		"description": "engineer building models Behavior Pack",
-		"uuid": "199b1579-1f1b-7f0f-df71-4500a8a55c9a",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 16, 0]
+	  "name": "engineer building models",
+	  "description": "engineer building models Behavior Pack",
+	  "uuid": "199b1579-1f1b-7f0f-df71-4500a8a55c9a",
+	  "version": [1, 0, 0],
+	  "min_engine_version": [1, 21, 50]
 	},
 	"metadata": {
-		"authors": ["emil"],
-		"generated_with": {
-			"blockbench_block_wizard": ["1.4.1"]
-		}
+	  "authors": ["emil"],
+	  "generated_with": {
+		"blockbench_block_wizard": ["1.4.1"]
+	  }
 	},
 	"modules": [
-		{
-			"description": "Behavior",
-			"version": [1, 0, 0],
-			"uuid": "afe5f0e7-13f0-2e93-217c-bfd3ceaa628e",
-			"type": "data"
-		},
-		{
-			"type": "script",
-			"lang": "javascript",
-			"entry": "scripts/upper_plate_fall.js",
-			"uuid": "6c4cde31-0618-4323-8415-c7be818cfbbe",
-			"version": [1, 0, 0]
-		  }
+	  {
+		"description": "Behavior",
+		"version": [1, 0, 0],
+		"uuid": "afe5f0e7-13f0-2e93-217c-bfd3ceaa628e",
+		"type": "data"
+	  },
+	  {
+		"type": "script",
+		"lang": "javascript",
+		"entry": "scripts/upper_plate_fall.js",
+		"uuid": "6c4cde31-0618-4323-8415-c7be818cfbbe",
+		"version": [1, 0, 0]
+	  }
 	],
 	"dependencies": [
-		{
-			"uuid": "db5fb13d-5cb4-0d19-6774-047a870fa877",
-			"version": [1, 0, 0]
-		}
+	  {
+		"uuid": "db5fb13d-5cb4-0d19-6774-047a870fa877",
+		"version": [1, 0, 0]
+	  },
+	  {
+		"module_name": "@minecraft/server",
+		"version": "1.12.0"
+	  }
 	]
-}
+  }
