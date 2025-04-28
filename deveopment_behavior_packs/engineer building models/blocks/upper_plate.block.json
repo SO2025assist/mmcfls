@@ -1,0 +1,28 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+	  "description": {
+		"identifier": "engineer:upper_plate",
+		"menu_category": {
+		  "category": "construction"
+		},
+		"states": {
+		  "engineer:distance": [0, 1, 2, 3, 4, 5, 6, 7]
+		}
+	  },
+	  "components": {
+		"minecraft:collision_box": false,
+		"minecraft:selection_box": true,
+		"minecraft:destructible_by_mining": false,
+		"minecraft:destructible_by_explosion": false,
+		"minecraft:geometry": "geometry.upper_plate",
+		"minecraft:material_instances": {
+		  "*": {
+			"texture": "upper_plate",
+			"render_method": "alpha_test"
+		  }
+		},
+		"minecraft:map_color": "#ffffff"
+	  }
+	}
+  }
