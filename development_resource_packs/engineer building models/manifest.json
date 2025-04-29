@@ -1,0 +1,24 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "engineer building models",
+		"description": "engineer building models Resource Pack",
+		"uuid": "db5fb13d-5cb4-0d19-6774-047a870fa877",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 21, 50]
+	},
+	"metadata": {
+		"authors": ["emil"],
+		"generated_with": {
+			"blockbench_block_wizard": ["1.4.1"]
+		}
+	},
+	"modules": [
+		{
+			"description": "engineer building models",
+			"type": "resources",
+			"uuid": "d2d73bf1-1d52-8cd6-7486-9bca8b9b9681",
+			"version": [1, 0, 0]
+		}
+	]
+}

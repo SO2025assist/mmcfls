@@ -1,0 +1,48 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:block": {
+    "description": {
+      "identifier": "engineer:upper_plate",
+      "menu_category": {
+        "category": "construction",
+        "group": "itemGroup.name.stone"
+      }
+    },
+    "components": {
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "upper_plate",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:geometry": "geometry.upper_plate",
+      "minecraft:collision_box": {
+        "origin": [-8, 7, -8],
+        "size": [16, 2, 16]
+      },
+      "minecraft:selection_box": {
+        "origin": [-8, 7, -8],
+        "size": [16, 2, 16]
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3
+      },
+      "minecraft:ticking": {
+        "interval_range": [1, 1],
+        "on_tick": {
+          "event": "engineer:check_fall"
+        }
+      }
+    },
+    "events": {
+      "engineer:check_fall": {
+        "run_command": {
+          "command": "testforblock ~ ~ ~ engineer:upper_plate"
+        }
+      }
+    }
+  }
+}
