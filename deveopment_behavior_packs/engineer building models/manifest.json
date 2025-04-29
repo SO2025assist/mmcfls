@@ -1,38 +1,26 @@
 {
 	"format_version": 2,
 	"header": {
-	  "name": "engineer building models",
-	  "description": "engineer building models Behavior Pack",
+	  "name": "Engineer Building Models",
+	  "description": "Custom blocks for engineering",
 	  "uuid": "199b1579-1f1b-7f0f-df71-4500a8a55c9a",
 	  "version": [1, 0, 0],
-	  "min_engine_version": [1, 21, 50]
-	},
-	"metadata": {
-	  "authors": ["emil"],
-	  "generated_with": {
-		"blockbench_block_wizard": ["1.4.1"]
-	  }
+	  "min_engine_version": [1, 21, 30]
 	},
 	"modules": [
 	  {
-		"description": "Behavior",
-		"version": [1, 0, 0],
+		"type": "data",
 		"uuid": "afe5f0e7-13f0-2e93-217c-bfd3ceaa628e",
-		"type": "data"
+		"version": [1, 0, 0]
 	  },
 	  {
 		"type": "script",
-		"lang": "javascript",
-		"entry": "scripts/upper_plate_fall.js",
+		"language": "javascript",
 		"uuid": "6c4cde31-0618-4323-8415-c7be818cfbbe",
-		"version": [1, 0, 0]
+		"entry": "scripts/upper_plate_fall.js"
 	  }
 	],
 	"dependencies": [
-	  {
-		"uuid": "db5fb13d-5cb4-0d19-6774-047a870fa877",
-		"version": [1, 0, 0]
-	  },
 	  {
 		"module_name": "@minecraft/server",
 		"version": "1.12.0"
