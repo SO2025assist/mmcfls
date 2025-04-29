@@ -1,48 +1,33 @@
 {
   "format_version": "1.21.30",
-  "minecraft:block": {
+  "minecraft:geometry": {
     "description": {
-      "identifier": "engineer:upper_plate",
-      "menu_category": {
-        "category": "construction",
-        "group": "itemGroup.name.stone"
-      }
+      "identifier": "geometry.upper_plate",
+      "texture_width": 16,
+      "texture_height": 16,
+      "visible_bounds_width": 2,
+      "visible_bounds_height": 2,
+      "visible_bounds_offset": [0, 0.5, 0]
     },
-    "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "upper_plate",
-          "render_method": "alpha_test"
-        }
-      },
-      "minecraft:geometry": "geometry.upper_plate",
-      "minecraft:collision_box": {
-        "origin": [-8, 7, -8],
-        "size": [16, 2, 16]
-      },
-      "minecraft:selection_box": {
-        "origin": [-8, 7, -8],
-        "size": [16, 2, 16]
-      },
-      "minecraft:destructible_by_mining": {
-        "seconds_to_destroy": 0.5
-      },
-      "minecraft:destructible_by_explosion": {
-        "explosion_resistance": 3
-      },
-      "minecraft:ticking": {
-        "interval_range": [1, 1],
-        "on_tick": {
-          "event": "engineer:check_fall"
-        }
+    "bones": [
+      {
+        "name": "upper_plate",
+        "pivot": [0, 8, 0],
+        "cubes": [
+          {
+            "origin": [-8, 7, -8],
+            "size": [16, 2, 16],
+            "uv": {
+              "north": {"uv": [0, 0], "uv_size": [16, 2]},
+              "east": {"uv": [0, 0], "uv_size": [16, 2]},
+              "south": {"uv": [0, 0], "uv_size": [16, 2]},
+              "west": {"uv": [0, 0], "uv_size": [16, 2]},
+              "up": {"uv": [0, 0], "uv_size": [16, 16]},
+              "down": {"uv": [0, 0], "uv_size": [16, 16]}
+            }
+          }
+        ]
       }
-    },
-    "events": {
-      "engineer:check_fall": {
-        "run_command": {
-          "command": "testforblock ~ ~ ~ engineer:upper_plate"
-        }
-      }
-    }
+    ]
   }
 }
