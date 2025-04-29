@@ -1,28 +1,48 @@
 {
-  "format_version": "1.21.50",
+  "format_version": "1.21.30",
   "minecraft:block": {
     "description": {
       "identifier": "engineer:upper_plate",
       "menu_category": {
-        "category": "construction"
-      },
-      "states": {
-        "engineer:distance": [0, 1, 2, 3, 4, 5, 6, 7]
+        "category": "construction",
+        "group": "itemGroup.name.stone"
       }
     },
     "components": {
-      "minecraft:collision_box": false,
-      "minecraft:selection_box": true,
-      "minecraft:destructible_by_mining": false,
-      "minecraft:destructible_by_explosion": false,
-      "minecraft:geometry": "geometry.upper_plate",
       "minecraft:material_instances": {
         "*": {
           "texture": "upper_plate",
           "render_method": "alpha_test"
         }
       },
-      "minecraft:map_color": "#ffffff"
+      "minecraft:geometry": "geometry.upper_plate",
+      "minecraft:collision_box": {
+        "origin": [-8, 7, -8],
+        "size": [16, 2, 16]
+      },
+      "minecraft:selection_box": {
+        "origin": [-8, 7, -8],
+        "size": [16, 2, 16]
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3
+      },
+      "minecraft:ticking": {
+        "interval_range": [1, 1],
+        "on_tick": {
+          "event": "engineer:check_fall"
+        }
+      }
+    },
+    "events": {
+      "engineer:check_fall": {
+        "run_command": {
+          "command": "testforblock ~ ~ ~ engineer:upper_plate"
+        }
+      }
     }
   }
 }
